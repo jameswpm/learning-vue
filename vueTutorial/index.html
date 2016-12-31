@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue Tutorial</title>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+
+		<div id="app">
+			<ul>
+				<div v-for="(band, index) in bands">
+					<h1>{{ band.name }}</h1>
+					<h3>{{ band.origin }}</h3>
+					<img v-bind:src="band.image" alt="band_logo" width="200"/>
+					{{band.similar}}
+					<input v-model="newBand">
+					<button v-on:click="addBand(index, newBand)">Add artist</button>
+				</div>
+			</ul>	
+		</div>
+
+
+		<script>
+			new Vue({
+				el: "#app",
+				data: {
+					newBand : "",
+					bands: [
+						{name: "Bayside", origin: "Queens, NY", image:"http://forcemm.com/wp-content/uploads/2013/07/Bayside-Press-Photo.jpg", similar:""},
+						{name: "Adele", origin: "London, UK", image: "https://pbs.twimg.com/profile_images/657199367556866048/EBEIl2ol_400x400.jpg", similar:""},
+						{name: "Silverstein", origin: "Toronto, CA", image:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Silverstein_group_shot.jpg/800px-Silverstein_group_shot.jpg", similar:""}
+					]
+				},
+				methods: {
+					addBand: function(index, newBand){
+						console.log(this.bands[index]);
+						this.bands[index].similar = this.bands[index].similar + ", " + newBand;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
