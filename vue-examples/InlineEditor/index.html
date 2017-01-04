@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<title>5 Practical Examples For Learning Vue.js - Inline Editor</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="main" v-cloak v-on:click="hideTooltip" >
+		    <div class="tooltip" v-on:click.stop v-if="show_tooltip">
+		        <input type="text" v-model="text_content" />
+		    </div>
+
+		    <p v-on:click.stop="toggleTooltip">{{text_content}}</p>
+
+		</div>
+	</body>
+	<footer>
+		<script src="https://unpkg.com/vue@2.1.8/dist/vue.js"></script>
+		<script src="vue_script.js"></script>
+	</footer>
+</html>	

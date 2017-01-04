@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/home/james/Documentos/Projetos_Gerais/learning-vue/vuejs2-authentication/src/app.js' from '/home/james/Documentos/Projetos_Gerais/learning-vue/vuejs2-authentication'");

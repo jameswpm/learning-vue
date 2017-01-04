@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <title>5 Practical Examples For Learning Vue.js - Menu Bar</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <form id="main" v-cloak>
+
+            <div class="bar">
+                <input type="text" v-model="searchString" placeholder="Enter your search terms" />
+            </div>
+
+            <ul>
+                <li v-for="article in filteredArticles">
+                    <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
+                    <p>{{article.title}}</p>
+                </li>
+            </ul>
+
+        </form>
+    </body>
+    <footer>
+        <script src="https://unpkg.com/vue@2.1.8/dist/vue.js"></script>
+        <script src="vue_script.js"></script>
+    </footer>
+</html> 
