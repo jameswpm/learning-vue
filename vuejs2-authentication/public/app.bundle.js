@@ -1,1 +1,1 @@
-console.error("Error: Cannot find module '/home/james/Documentos/Projetos_Gerais/learning-vue/vuejs2-authentication/src/app.js' from '/home/james/Documentos/Projetos_Gerais/learning-vue/vuejs2-authentication'");
+console.error("SyntaxError: /home/james/Documentos/Projetos_Gerais/learning-vue/vuejs2-authentication/src/exclamations_viewer.vue: Unexpected token, expected , (34:8) while parsing file: /home/james/Documentos/Projetos_Gerais/learning-vue/vuejs2-authentication/src/exclamations_viewer.vue");
